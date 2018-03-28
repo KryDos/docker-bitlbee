@@ -12,7 +12,7 @@ curl -LO# https://github.com/jgeboski/bitlbee-facebook/archive/v1.1.2.tar.gz && 
 hg clone https://bitbucket.org/EionRobb/purple-hangouts/ && \
 tar zxvf bitlbee-$VERSION.tar.gz && \
 cd bitlbee-$VERSION && \
-./configure --jabber=1 --otr=1 --purple=1 && \
+./configure --jabber=1 --purple=1 && \
 make && \
 make install && \
 make install-etc && \
@@ -65,4 +65,3 @@ RUN touch /var/run/bitlbee.pid && \
 USER daemon
 EXPOSE 6667
 CMD ["/usr/local/sbin/bitlbee", "-c", "/usr/local/etc/bitlbee/bitlbee.conf", "-n", "-u", "daemon"]
-
